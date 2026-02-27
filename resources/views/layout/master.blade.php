@@ -15,11 +15,13 @@
         </div>
         <div class='col-9' >
             <div class="container" >
-@if (session('success'))
+
+
+{{-- @if (session('success'))
     <div class="alert alert-success " >
         {{ session('success') }}
     </div>
-@endif
+@endif --}}
                 @yield('content')
             </div>
         </div>

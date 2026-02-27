@@ -68,3 +68,18 @@ Route::view('/compte/creer','creer');
 Route::get('/compte/creer', [CompteController::class , 'creer'])->name('compte.creer');
 Route::post('/compte/creer', [CompteController::class , 'store'])->name('compte.store');
 
+//strudent
+use App\Http\Controllers\StudentController;
+Route::resource('students',StudentController::class);
+
+//stagiaire
+use App\Http\Controllers\StagiaireController;
+Route::resource('stagiaires',StagiaireController::class);
+
+//ANNONCE
+use App\Http\Controllers\AnnonceController;
+Route::get('/annonces/dashboard',[AnnonceController::class, 'statique'])->name('annonces.dashboard');
+Route::resource('annonces',AnnonceController::class);
+
+
+

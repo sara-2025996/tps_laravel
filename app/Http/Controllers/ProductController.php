@@ -38,12 +38,12 @@ return view('products.creat');
         $price = $request->price;
         $desc = $request->desc;
 
-        
         $request->validate([
         'title' => 'required|min:3|string',
         'price' => 'required|numeric',
         'desc' => 'required|min:10'
     ]);
+
     return redirect()->route('products.creat')->with('success','Produit ajouté avec succès');
     }
 
